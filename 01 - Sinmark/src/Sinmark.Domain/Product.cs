@@ -1,15 +1,20 @@
-﻿using System;
+﻿using SharedKernel.Domain.Entities;
+using System;
+using System.Collections.Generic;
 
 namespace Sinmark.Domain
 {
-    public class Product
+    internal class Product : EntityAuditable<Guid>
     {
-        protected Guid Id { get; }
+        internal string Description { get; }
 
-        protected string Description { get; }
+        internal decimal BasePrice { get; }
 
-        protected decimal BasePrice { get; }
+        internal bool Visible { get; }
 
-        protected bool Visible { get; }
+        /// <summary>
+        /// https://medium.com/developers-arena/ienumerable-vs-icollection-vs-ilist-vs-iqueryable-in-c-2101351453db
+        /// </summary>
+        internal IEnumerable<Image> Images { get; }
     }
 }

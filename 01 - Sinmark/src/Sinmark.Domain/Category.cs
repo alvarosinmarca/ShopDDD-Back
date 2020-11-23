@@ -1,20 +1,19 @@
 ﻿using System;
+using SharedKernel.Domain.Entities;
 
 namespace Sinmark.Domain
 {
-    public class Category
+    internal class Category : EntityAuditable<Guid>
     {
-        public Guid Id { get; }
+        internal string Name { get; }
 
-        public string Name { get; }
-
-        public string Description { get; }
+        internal string Description { get; }
 
         /// <summary>
         /// For SEO
         /// </summary>
-        public string FriendlyUrl { get; }
+        internal string FriendlyUrl { get; }
 
-        public string Visible { get; }
+        internal string Visible { get; }
     }
 }
