@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using SharedKernel.Domain.Entities;
+using Sinmark.Domain.Products;
 
-namespace Sinmark.Domain
+namespace Sinmark.Domain.WishLists
 {
     internal class WishList: EntityAuditable<Guid>
     {

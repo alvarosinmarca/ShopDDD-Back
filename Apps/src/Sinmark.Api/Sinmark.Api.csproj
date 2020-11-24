@@ -10,5 +10,12 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\GitHub\SharedKernel\src\Api\SharedKernel.Api.csproj" />
+    <ProjectReference Include="..\..\..\..\..\..\..\GitHub\SharedKernel\src\Infrastructure\SharedKernel.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Sinmark\src\Sinmark.Application\Sinmark.Application.csproj" />
+    <ProjectReference Include="..\..\..\Sinmark\src\Sinmark.Infraestructure\Sinmark.Infrastructure.csproj" />
+  </ItemGroup>
+
 
 </Project>

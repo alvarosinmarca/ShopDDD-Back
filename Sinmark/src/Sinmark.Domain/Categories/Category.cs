@@ -1,9 +1,9 @@
 ﻿using System;
-using SharedKernel.Domain.Entities;
+using SharedKernel.Domain.Aggregates;
 
-namespace Sinmark.Domain
+namespace Sinmark.Domain.Categories
 {
-    internal class Category : EntityAuditable<Guid>
+    internal class Category : AggregateRootAuditable<Guid>
     {
         public string Name { get; }
 

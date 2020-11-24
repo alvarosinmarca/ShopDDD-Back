@@ -8,4 +8,9 @@
     <None Include="..\..\..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\GitHub\SharedKernel\src\Application\SharedKernel.Application.csproj" />
+    <ProjectReference Include="..\Sinmark.Domain\Sinmark.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

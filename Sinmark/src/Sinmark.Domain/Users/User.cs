@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using SharedKernel.Domain.Entities;
+using Sinmark.Domain.WishLists;
 
-namespace Sinmark.Domain
+namespace Sinmark.Domain.Users
 {
     // TODO ALVARO: Dudas respecto a la otra entidad User en Authentication.Domain
 
