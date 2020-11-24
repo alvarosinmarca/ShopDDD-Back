@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Sinmark", "01 - Sinmark", "{94F69D0B-6314-4790-A3D8-0B3C0FF0DE5A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Stock", "01 - Stock", "{94F69D0B-6314-4790-A3D8-0B3C0FF0DE5A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6B94957C-F7E6-4A92-BDDC-3BA998964226}"
 EndProject
@@ -21,11 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B7F81964-889
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4D7F0AAC-4630-409C-B74A-258D1D793B9B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Application", "Sinmark\src\Sinmark.Application\Sinmark.Application.csproj", "{AA01305D-27B9-477F-ADB8-16430E2F6CDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.Application", "Stock\src\Stock.Application\Stock.Application.csproj", "{AA01305D-27B9-477F-ADB8-16430E2F6CDE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Domain", "Sinmark\src\Sinmark.Domain\Sinmark.Domain.csproj", "{849818E3-D119-4349-AB53-490B62A97F62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.Domain", "Stock\src\Stock.Domain\Stock.Domain.csproj", "{849818E3-D119-4349-AB53-490B62A97F62}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Infrastructure", "Sinmark\src\Sinmark.Infraestructure\Sinmark.Infrastructure.csproj", "{208F5A68-5056-40D2-A7E3-3C66DE1BDFB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.Infrastructure", "Stock\src\Stock.Infraestructure\Stock.Infrastructure.csproj", "{208F5A68-5056-40D2-A7E3-3C66DE1BDFB1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Payment", "04 - Payment", "{BFD58BC8-6BCA-4151-9629-6B32F8CB92AF}"
 EndProject
@@ -41,7 +41,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CFE09852-1FF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CD8A8AEC-3946-48CD-B434-FB770A70EAD8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Api", "Apps\src\Sinmark.Api\Sinmark.Api.csproj", "{2398BAB4-FD94-4B0D-B882-06C63C13E631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.Api", "Apps\src\Stock.Api\Stock.Api.csproj", "{2398BAB4-FD94-4B0D-B882-06C63C13E631}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3BCD4207-D0A5-4EEA-BD7A-B028E93EF599}"
 EndProject
