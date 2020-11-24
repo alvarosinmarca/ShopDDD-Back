@@ -9,5 +9,7 @@ namespace Blog.Domain
         public string Body { get; }
 
         public bool Visible { get; }
+
+        // TODO: Si un blog 
     }
 }
