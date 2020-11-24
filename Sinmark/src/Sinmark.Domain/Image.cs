@@ -5,8 +5,10 @@ namespace Sinmark.Domain
 {
     internal class Image : EntityAuditable<Guid>
     {
-        internal string FileName { get; }
-        internal string Description { get; }
-        internal bool IsPrincipal { get; }
+        public string FileName { get; }
+
+        public string Description { get; }
+
+        public bool IsPrincipal { get; }
     }
 }

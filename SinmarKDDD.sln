@@ -21,11 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B7F81964-889
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4D7F0AAC-4630-409C-B74A-258D1D793B9B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Application", "01 - Sinmark\src\Sinmark.Application\Sinmark.Application.csproj", "{AA01305D-27B9-477F-ADB8-16430E2F6CDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Application", "Sinmark\src\Sinmark.Application\Sinmark.Application.csproj", "{AA01305D-27B9-477F-ADB8-16430E2F6CDE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Domain", "01 - Sinmark\src\Sinmark.Domain\Sinmark.Domain.csproj", "{849818E3-D119-4349-AB53-490B62A97F62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Domain", "Sinmark\src\Sinmark.Domain\Sinmark.Domain.csproj", "{849818E3-D119-4349-AB53-490B62A97F62}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Infraestructure", "01 - Sinmark\src\Sinmark.Infraestructure\Sinmark.Infraestructure.csproj", "{208F5A68-5056-40D2-A7E3-3C66DE1BDFB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Infraestructure", "Sinmark\src\Sinmark.Infraestructure\Sinmark.Infraestructure.csproj", "{208F5A68-5056-40D2-A7E3-3C66DE1BDFB1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Payment", "04 - Payment", "{BFD58BC8-6BCA-4151-9629-6B32F8CB92AF}"
 EndProject
@@ -33,7 +33,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{800027B4-AE1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4F7562BF-BA5D-4763-86B5-DC18E1A32B20}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - SharedKernel", "05 - SharedKernel", "{663CACE0-9144-4996-8AC0-B5C6E438A17C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XX - SharedKernel", "XX - SharedKernel", "{663CACE0-9144-4996-8AC0-B5C6E438A17C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Purchasing", "03 - Purchasing", "{C12F76DB-E2FF-48B7-9E6B-3C84BEBC22D2}"
 EndProject
@@ -41,7 +41,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CFE09852-1FF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CD8A8AEC-3946-48CD-B434-FB770A70EAD8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Api", "00 - Apps\src\Sinmark.Api\Sinmark.Api.csproj", "{2398BAB4-FD94-4B0D-B882-06C63C13E631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sinmark.Api", "Apps\src\Sinmark.Api\Sinmark.Api.csproj", "{2398BAB4-FD94-4B0D-B882-06C63C13E631}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3BCD4207-D0A5-4EEA-BD7A-B028E93EF599}"
 EndProject
@@ -56,6 +56,24 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Domain", "..\..\..\..\GitHub\SharedKernel\src\Domain\SharedKernel.Domain.csproj", "{54FD5A2F-BD05-4549-A74E-4F07D50EC18D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Infrastructure", "..\..\..\..\GitHub\SharedKernel\src\Infrastructure\SharedKernel.Infrastructure.csproj", "{A9C0BA84-D2D6-45DA-84A8-B782B1C18B95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Blog", "05 - Blog", "{65D26FB1-0F0A-40A3-9753-3F469C18F043}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ABA2AB56-4958-47C3-B91A-BB924C5F1CFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{060FD34B-36EE-4629-B3DD-35CD1C6F9DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Application", "Blog\src\Blog.Application\Blog.Application.csproj", "{999B4545-AE26-43EA-8F98-F538EF11C3D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Domain", "Blog\src\Blog.Domain\Blog.Domain.csproj", "{FCAE447D-365F-433B-9892-0E9DA86D46FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Infraestructure", "Blog\src\Blog.Infraestructure\Blog.Infraestructure.csproj", "{48E3C376-9194-441E-89CC-ACA3993170FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication.Application", "Authentication\src\Authentication.Application\Authentication.Application.csproj", "{DD59B4BD-070B-46A8-8D60-10A0549522E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication.Domain", "Authentication\src\Authentication.Domain\Authentication.Domain.csproj", "{40A9D8DB-1A73-4AEE-BF10-32088E27648C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication.Infraestructure", "Authentication\src\Authentication.Infraestructure\Authentication.Infraestructure.csproj", "{AC001612-97DE-466A-A06D-A0151D691E31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +117,30 @@ Global
 		{A9C0BA84-D2D6-45DA-84A8-B782B1C18B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9C0BA84-D2D6-45DA-84A8-B782B1C18B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9C0BA84-D2D6-45DA-84A8-B782B1C18B95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999B4545-AE26-43EA-8F98-F538EF11C3D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999B4545-AE26-43EA-8F98-F538EF11C3D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999B4545-AE26-43EA-8F98-F538EF11C3D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999B4545-AE26-43EA-8F98-F538EF11C3D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCAE447D-365F-433B-9892-0E9DA86D46FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCAE447D-365F-433B-9892-0E9DA86D46FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCAE447D-365F-433B-9892-0E9DA86D46FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCAE447D-365F-433B-9892-0E9DA86D46FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E3C376-9194-441E-89CC-ACA3993170FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E3C376-9194-441E-89CC-ACA3993170FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E3C376-9194-441E-89CC-ACA3993170FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E3C376-9194-441E-89CC-ACA3993170FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD59B4BD-070B-46A8-8D60-10A0549522E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD59B4BD-070B-46A8-8D60-10A0549522E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD59B4BD-070B-46A8-8D60-10A0549522E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD59B4BD-070B-46A8-8D60-10A0549522E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40A9D8DB-1A73-4AEE-BF10-32088E27648C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A9D8DB-1A73-4AEE-BF10-32088E27648C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A9D8DB-1A73-4AEE-BF10-32088E27648C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A9D8DB-1A73-4AEE-BF10-32088E27648C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC001612-97DE-466A-A06D-A0151D691E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC001612-97DE-466A-A06D-A0151D691E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC001612-97DE-466A-A06D-A0151D691E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC001612-97DE-466A-A06D-A0151D691E31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,6 +167,14 @@ Global
 		{344F7C5A-5148-46DD-9928-B8D9373B9072} = {3BCD4207-D0A5-4EEA-BD7A-B028E93EF599}
 		{54FD5A2F-BD05-4549-A74E-4F07D50EC18D} = {3BCD4207-D0A5-4EEA-BD7A-B028E93EF599}
 		{A9C0BA84-D2D6-45DA-84A8-B782B1C18B95} = {3BCD4207-D0A5-4EEA-BD7A-B028E93EF599}
+		{ABA2AB56-4958-47C3-B91A-BB924C5F1CFF} = {65D26FB1-0F0A-40A3-9753-3F469C18F043}
+		{060FD34B-36EE-4629-B3DD-35CD1C6F9DED} = {65D26FB1-0F0A-40A3-9753-3F469C18F043}
+		{999B4545-AE26-43EA-8F98-F538EF11C3D5} = {ABA2AB56-4958-47C3-B91A-BB924C5F1CFF}
+		{FCAE447D-365F-433B-9892-0E9DA86D46FC} = {ABA2AB56-4958-47C3-B91A-BB924C5F1CFF}
+		{48E3C376-9194-441E-89CC-ACA3993170FB} = {ABA2AB56-4958-47C3-B91A-BB924C5F1CFF}
+		{DD59B4BD-070B-46A8-8D60-10A0549522E3} = {B7F81964-8890-4A04-894A-A8A12BA0E3C3}
+		{40A9D8DB-1A73-4AEE-BF10-32088E27648C} = {B7F81964-8890-4A04-894A-A8A12BA0E3C3}
+		{AC001612-97DE-466A-A06D-A0151D691E31} = {B7F81964-8890-4A04-894A-A8A12BA0E3C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21F1A567-1BF7-4FD6-B747-1A3D3D4201A0}
