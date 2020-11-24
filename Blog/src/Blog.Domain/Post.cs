@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using SharedKernel.Domain.Entities;
 
 namespace Blog.Domain
@@ -11,6 +12,6 @@ namespace Blog.Domain
 
         public bool Visible { get; }
 
-        // TODO: Si un blog 
+        public IEnumerable<Tag> Tags { get; }
     }
 }
