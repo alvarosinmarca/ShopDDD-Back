@@ -1,4 +1,5 @@
-﻿using SharedKernel.Domain.Entities;
+﻿using System;
+using SharedKernel.Domain.Entities;
 
 namespace Authentication.Domain
 {
