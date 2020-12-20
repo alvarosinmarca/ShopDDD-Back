@@ -3,7 +3,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SharedKernel.Infrastructure.Cqrs.Commands;
 using SharedKernel.Infrastructure.Cqrs.Queries;
+using SharedKernel.Infrastructure.Data.Dapper;
 using SharedKernel.Infrastructure.Data.Dapper.Queries;
+using SharedKernel.Infrastructure.Data.EntityFrameworkCore;
 using SharedKernel.Infrastructure.Data.EntityFrameworkCore.DbContexts;
 using SharedKernel.Infrastructure.Data.EntityFrameworkCore.Queries;
 using SharedKernel.Infrastructure.Events;
@@ -22,57 +24,32 @@ namespace Stock.Infrastructure
         public static IServiceCollection AddStockModule(this IServiceCollection services,
         IConfiguration configuration, string connectionStringName)
         {
-            // TODO AUTOMAPPER
-
-            //var assemblies = new[]
-            //{ // Ponemos 3 tipos de cada ensamblado para hacer magia
-            //typeof(CreateProductCommand).Assembly,
-            //typeof(Product).Assembly,
-            //typeof(StockDbContext).Assembly
-            //};
-
-            //services.Configure<Sermepa>(configuration.GetSection(nameof(Sermepa)));
-
             return services
-           //.AddAutoMapper(assemblies)
-           .AddDomainEventsSubscribers(typeof(CreateProductCommand).Assembly) // Esta es una clase, pero puede ser cualquiera de la misma capa
-           .AddCommandsHandlers(typeof(CreateProductCommand).Assembly)
-           .AddQueriesHandlers(typeof(StockDbContext).Assembly)
-           .AddPaymentSqlServerPersitence(configuration, connectionStringName);
+                .AddDomainEvents(typeof(ProductCreatedEvent))
+                .AddDomainEventsSubscribers(typeof(CreateProductCommand)) // Esta es una clase, pero puede ser cualquiera de la misma capa
+               .AddCommandsHandlers(typeof(CreateProductCommand))
+               .AddQueriesHandlers(typeof(StockDbContext))
+               .AddDapperSqlServer<StockDbContext>(configuration, connectionStringName)
+               .AddEntityFrameworkCoreSqlServer<StockDbContext>(configuration, connectionStringName)
+               .AddApplicationServices()
+               .AddDomainServices()
+               .AddRepositories();
         }
 
-        private static IServiceCollection AddPaymentSqlServerPersitence(this IServiceCollection services,
-       IConfiguration configuration, string connectionStringName)
+        private static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-            services.AddScoped(s =>
-            new DbContextOptionsBuilder<StockDbContext>()
-            .UseSqlServer(configuration.GetConnectionString(connectionStringName))
-            .EnableSensitiveDataLogging());
+            return services;
+        }
 
-            // Escritura
-            services.AddDbContext<StockDbContext>(s =>
-            s.UseSqlServer(configuration.GetConnectionString(connectionStringName))
-            .EnableSensitiveDataLogging(), ServiceLifetime.Transient);
+        private static IServiceCollection AddDomainServices(this IServiceCollection services)
+        {
+            return services;
+        }
 
-            //services.AddScoped<IPaymentUnitOfWork, StockDbContext>();
-
-            // Lectura
-            services.AddScoped(s =>
-            new EntityFrameworkCoreQueryProvider<StockDbContext>(() => new StockDbContext(
-            s.GetRequiredService<DbContextOptionsBuilder<StockDbContext>>()
-            .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking).Options,
-            s.GetService<IAuditableService>())));
-
-            services.AddScoped(s =>
-           new DapperQueryProvider<StockDbContext>(() => new StockDbContext(
-           s.GetRequiredService<DbContextOptionsBuilder<StockDbContext>>()
-           .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking).Options,
-           s.GetService<IAuditableService>())));
-
+        private static IServiceCollection AddRepositories(this IServiceCollection services)
+        {
             return services
                 .AddTransient<IProductRepository, ProductEntityFrameworkCoreRepository>();
-            //.AddTransient<IPaymentMadeRepository, PaymentMadeEntityFrameworkCoreRepository>()
-            //.AddTransient<IPaymentService, PaymentService>();
         }
     }
 }
