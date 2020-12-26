@@ -1,8 +1,28 @@
 version: '3.4'
 
 services:
+
   stock.api:
     image: ${DOCKER_REGISTRY-}stockapi
     build:
       context: .
       dockerfile: Apps/src/Stock.Api/Dockerfile
+
+  sql-server:
+        container_name: sql-server
+        image: mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-16.04
+        ports:
+            - 22220:1433
+        environment:
+            - ACCEPT_EULA=Y
+            - SA_PASSWORD=1234*ABS*VK
+        volumes:
+            - .\SqlServer\backups:/var/opt/mssql/backups
+            - .\SqlServer\sqlserver:/var/opt/sqlserver
+            - .\SqlServer\data:/var/opt/mssql/data
+
+  redis:
+        container_name: redis-server
+        image: redis:6.0.9
+        ports:
+            - 6379:6379
