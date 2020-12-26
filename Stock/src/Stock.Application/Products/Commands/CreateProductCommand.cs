@@ -8,7 +8,7 @@ namespace Stock.Application.Products.Commands
     /// <summary>
     /// Esto es el contrato con la API (Es un DTO)
     /// </summary>
-    public class CreateProductCommand : ICommandRequest
+    public class CreateProductCommand : ICommandRequest<int>
     {
         public CreateProductCommand(Guid id)
         {

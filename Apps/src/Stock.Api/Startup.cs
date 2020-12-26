@@ -86,16 +86,16 @@ namespace Stock.Api
 
                 // Event bus
                 //.AddRabbitMqEventBus(Configuration)
-                //.AddInMemoryEventBus()
+                .AddInMemoryEventBus()
                 //.AddRedisEventBus(Configuration)
 
                 // Add modules
 
-                .AddStockModule(Configuration, "StockConnection");
+                .AddStockModule(Configuration, "StockConnection")
             // Other Modules
 
             // Register all domain event subscribers
-            //.AddDomainEventSubscribers();
+            .AddDomainEventSubscribers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IOptions<OpenApiOptions> options)
