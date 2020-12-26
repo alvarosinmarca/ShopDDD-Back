@@ -32,8 +32,9 @@ namespace Stock.Application.Products.Commands
 
             _productRepository.SaveChanges(); // Aquí podrías hacer UnitOfWork y grabarías
 
-            return _eventBus.Publish(productCreate.PullDomainEvents(), cancellationToken);
+            //return _eventBus.Publish(productCreate.PullDomainEvents(), cancellationToken);
 
+            return Task.CompletedTask;
         }
     }
 }

@@ -19,6 +19,8 @@ namespace Stock.Api
 {
     public class Startup
     {
+        #region Comentado
+
         //public Startup(IConfiguration configuration)
         //{
         //    Configuration = configuration;
@@ -58,6 +60,8 @@ namespace Stock.Api
         //    app.UseOpenApi(options);
         //}
 
+        #endregion
+
         private const string CorsPolicy = "CorsPolicy";
 
         private IConfiguration Configuration { get; }
@@ -76,23 +80,23 @@ namespace Stock.Api
                 .AddSharedKernelHealthChecks()
                 .AddSharedKernelOpenApi(Configuration)
 
-                // Cache
+                // CACHÉ
                 //.AddRedisDistributedCache(Configuration)
                 .AddInMemoryCache()
 
+                // COMMAND BUS
                 .AddInMemoryCommandBus()
 
+                // QUERY BUS
                 .AddInMemoryQueryBus()
 
-                // Event bus
+                // EVENT BUS
                 //.AddRabbitMqEventBus(Configuration)
-                .AddInMemoryEventBus()
-                //.AddRedisEventBus(Configuration)
+                //.AddInMemoryEventBus()
+                .AddRedisEventBus(Configuration)
 
-                // Add modules
-
+                // MODULES
                 .AddStockModule(Configuration, "StockConnection")
-            // Other Modules
 
             // Register all domain event subscribers
             .AddDomainEventSubscribers();
