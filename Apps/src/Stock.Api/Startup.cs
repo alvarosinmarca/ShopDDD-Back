@@ -71,6 +71,10 @@ namespace Stock.Api
             Configuration = configuration;
         }
 
+        // Singleton: Crea una única instancia de toda la aplicación. Crea la instancia por primera vez y reutiliza el mismo objeto en todas las llamadas.
+        // Scope: Los servicios se crean una vez por solicitud dentro del alcance. Es equivalente a Singleton en el alcance actual. p.ej.en MVC crea 1 instancia por cada solicitud http pero usa la misma instancia en las otras llamadas dentro de la misma solicitud web.
+        // Transient: Los servicios se crean cada vez que se solicitan (Para servicios livianos y apátridas).
+
         public void ConfigureServices(IServiceCollection services)
         {
             services
