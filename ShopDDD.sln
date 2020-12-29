@@ -47,15 +47,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3BCD4207-D0A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{82ECBF31-A356-465C-A3CB-30D813607538}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Api", "..\..\..\..\GitHub\SharedKernel\src\Api\SharedKernel.Api.csproj", "{71C26750-9E9D-49FA-96C1-264797022474}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Api", "..\..\GitHub\SharedKernel\src\Api\SharedKernel.Api.csproj", "{71C26750-9E9D-49FA-96C1-264797022474}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Api.Gateway", "..\..\..\..\GitHub\SharedKernel\src\Api.Gateway\SharedKernel.Api.Gateway.csproj", "{AC48BE38-7E55-406E-9CC9-339499F9EAB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Api.Gateway", "..\..\GitHub\SharedKernel\src\Api.Gateway\SharedKernel.Api.Gateway.csproj", "{AC48BE38-7E55-406E-9CC9-339499F9EAB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Application", "..\..\..\..\GitHub\SharedKernel\src\Application\SharedKernel.Application.csproj", "{344F7C5A-5148-46DD-9928-B8D9373B9072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Application", "..\..\GitHub\SharedKernel\src\Application\SharedKernel.Application.csproj", "{344F7C5A-5148-46DD-9928-B8D9373B9072}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Domain", "..\..\..\..\GitHub\SharedKernel\src\Domain\SharedKernel.Domain.csproj", "{54FD5A2F-BD05-4549-A74E-4F07D50EC18D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Domain", "..\..\GitHub\SharedKernel\src\Domain\SharedKernel.Domain.csproj", "{54FD5A2F-BD05-4549-A74E-4F07D50EC18D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Infrastructure", "..\..\..\..\GitHub\SharedKernel\src\Infrastructure\SharedKernel.Infrastructure.csproj", "{A9C0BA84-D2D6-45DA-84A8-B782B1C18B95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel.Infrastructure", "..\..\GitHub\SharedKernel\src\Infrastructure\SharedKernel.Infrastructure.csproj", "{A9C0BA84-D2D6-45DA-84A8-B782B1C18B95}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Blog", "05 - Blog", "{65D26FB1-0F0A-40A3-9753-3F469C18F043}"
 EndProject
