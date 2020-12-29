@@ -1,40 +1,30 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using SharedKernel.Application.Logging;
-using SharedKernel.Domain.Events;
+﻿using SharedKernel.Application.Cqrs.Commands.Handlers;
 using Stock.Domain.Products;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Stock.Application.Products.Commands
 {
-    // Comando por memoria
-    // Event por rabbit
-
-    internal class CreateProductCommandHandler : SharedKernel.Application.Cqrs.Commands.Handlers.ICommandRequestHandler<CreateProductCommand>
+    internal class CreateProductCommandHandler : ICommandRequestHandler<CreateProductCommand>
     {
         private readonly IProductRepository _productRepository;
 
-        private readonly ICustomLogger _customLogger;
-        private readonly IEventBus _eventBus;
-
-        public CreateProductCommandHandler(IProductRepository productRepository, ICustomLogger customLogger, IEventBus eventBus)
+        public CreateProductCommandHandler(IProductRepository productRepository)
         {
             _productRepository = productRepository;
-            _customLogger = customLogger;
-            _eventBus = eventBus;
         }
 
         public Task Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
-            var productCreate = Product.Create(command.Id);
-            _customLogger.Info("Peligrooo");
+            var newProduct = Product.Create(command.Id);
+            _productRepository.Add(newProduct);
 
-            _productRepository.Add(productCreate);
+            _productRepository.SaveChanges(); // Here you can do UnitOfWork and will save
 
-            _productRepository.SaveChanges(); // Aquí podrías hacer UnitOfWork y grabarías
-
+            // TODO: Here will launch a event when the events work in SharedKernel
             //return _eventBus.Publish(productCreate.PullDomainEvents(), cancellationToken);
 
-            return Task.CompletedTask;
+            return Task.FromResult(newProduct.Id);
         }
     }
 }

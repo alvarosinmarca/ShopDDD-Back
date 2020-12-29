@@ -1,14 +1,11 @@
-﻿using System;
-using SharedKernel.Application.Cqrs.Commands;
+﻿using SharedKernel.Application.Cqrs.Commands;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Stock.Application.Products.Commands
 {
-    // ESTO ES LO QUE SERIA UN RECORD EN .NET 5.0
-
-    /// <summary>
-    /// Esto es el contrato con la API (Es un DTO)
-    /// </summary>
-    public class CreateProductCommand : ICommandRequest<int>
+    public class CreateProductCommand : ICommandRequest
     {
         public CreateProductCommand(Guid id)
         {
@@ -16,6 +13,5 @@ namespace Stock.Application.Products.Commands
         }
 
         public Guid Id { get; }
-
     }
 }

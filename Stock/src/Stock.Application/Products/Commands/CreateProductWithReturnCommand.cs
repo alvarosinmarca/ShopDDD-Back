@@ -1,14 +1,14 @@
 ﻿using System;
-using SharedKernel.Application.Cqrs.Queries;
+using SharedKernel.Application.Cqrs.Commands;
 
-namespace Stock.Application.Products.Queries
+namespace Stock.Application.Products.Commands
 {
     /// <summary>
     /// This is a contract with the API, similar to Dto, this can be write with new feature RECORD
     /// </summary>
-    public class GetProductQuery : IQueryRequest<Guid> // Esto es lo que retorna (Un dto cuando tenga)
+    public class CreateProductWithReturnCommand : ICommandRequest<Guid>
     {
-        public GetProductQuery(Guid id)
+        public CreateProductWithReturnCommand(Guid id)
         {
             Id = id;
         }
