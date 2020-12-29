@@ -8,9 +8,6 @@ using System;
 namespace Stock.Api.Controllers
 {
     // Why partial class?: https://stackoverflow.com/questions/53505197/net-core-2-1-swashbuckle-group-controllers-by-area
-
-    [Route("api/[controller]")]
-    [ApiController]
     public partial class ProductsController : ControllerBase
     {
         // FromServices = Injection for method, no inject in constructor because have more methods and can break all

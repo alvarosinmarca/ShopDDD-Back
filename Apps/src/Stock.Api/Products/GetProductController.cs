@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 
 namespace Stock.Api.Products
 {
-    [Route("api/[controller]")]
-    [ApiController]
     public partial class ProductsController : ControllerBase
     {
         /// <summary>

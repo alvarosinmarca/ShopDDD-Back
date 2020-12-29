@@ -14,7 +14,7 @@ namespace Stock.Api.Products
         [HttpPost("api/createProduct")]
         public async Task<IActionResult> CreateProductWithReturn([FromServices] ICommandBus commandBus, [FromBody] CreateProductCommand command, CancellationToken cancellationToken)
         {
-           await commandBus.Dispatch(command, cancellationToken);
+            await commandBus.Dispatch(command, cancellationToken);
             return Ok();
         }
 
