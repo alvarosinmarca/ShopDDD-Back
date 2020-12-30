@@ -1,7 +1,5 @@
 ﻿using SharedKernel.Application.Cqrs.Commands;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Stock.Application.Products.Commands
 {

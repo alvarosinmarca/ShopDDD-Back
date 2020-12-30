@@ -1,6 +1,6 @@
 ﻿using SharedKernel.Infrastructure.Data.EntityFrameworkCore.Repositories;
 using Stock.Domain.Products;
-using Stock.Infraestructure.Data.EFCore;
+using Stock.Infrastructure.Data.EFCore;
 
 namespace Stock.Infrastructure.Products
 {

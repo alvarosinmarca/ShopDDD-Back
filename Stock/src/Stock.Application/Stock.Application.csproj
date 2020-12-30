@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\GitHub\SharedKernel\src\Application\SharedKernel.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\..\GitHub\SharedKernel\src\Application\SharedKernel.Application.csproj" />
     <ProjectReference Include="..\Stock.Domain\Stock.Domain.csproj" />
   </ItemGroup>
 

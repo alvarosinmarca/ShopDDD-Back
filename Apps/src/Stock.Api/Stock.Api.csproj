@@ -21,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\..\GitHub\SharedKernel\src\Api\SharedKernel.Api.csproj" />
-    <ProjectReference Include="..\..\..\..\..\..\..\GitHub\SharedKernel\src\Infrastructure\SharedKernel.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\..\..\GitHub\SharedKernel\src\Api\SharedKernel.Api.csproj" />
+    <ProjectReference Include="..\..\..\..\..\GitHub\SharedKernel\src\Infrastructure\SharedKernel.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\Stock\src\Stock.Application\Stock.Application.csproj" />
     <ProjectReference Include="..\..\..\Stock\src\Stock.Infraestructure\Stock.Infrastructure.csproj" />
   </ItemGroup>

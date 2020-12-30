@@ -7,7 +7,7 @@ using SharedKernel.Infrastructure.Data.EntityFrameworkCore;
 using SharedKernel.Infrastructure.Events;
 using Stock.Application.Products.Commands;
 using Stock.Domain.Products;
-using Stock.Infraestructure.Data.EFCore;
+using Stock.Infrastructure.Data.EFCore;
 using Stock.Infrastructure.Products;
 
 namespace Stock.Infrastructure

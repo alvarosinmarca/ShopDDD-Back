@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SharedKernel.Infrastructure.Data.EntityFrameworkCore.DbContexts;
 
-namespace Stock.Infraestructure.Data.EFCore
+namespace Stock.Infrastructure.Data.EFCore
 {
     public class StockDbContext : DbContextBase
     {

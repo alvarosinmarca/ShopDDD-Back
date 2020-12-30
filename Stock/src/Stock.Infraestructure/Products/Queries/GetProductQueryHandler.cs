@@ -4,26 +4,26 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SharedKernel.Infrastructure.Cqrs.Queries;
-using SharedKernel.Infrastructure.Data.Dapper.Queries;
+//using SharedKernel.Infrastructure.Data.Dapper.Queries;
 using SharedKernel.Infrastructure.Data.EntityFrameworkCore.Queries;
 using Stock.Application.Products.Queries;
 using Stock.Domain.Products;
-using Stock.Infraestructure.Data.EFCore;
+using Stock.Infrastructure.Data.EFCore;
 
 namespace Stock.Infrastructure.Products.Queries
 {
     internal class GetProductQueryHandler : IQueryRequestHandler<GetProductQuery, Guid>
     {
         private readonly EntityFrameworkCoreQueryProvider<StockDbContext> _queryProvider;
-        private readonly DapperQueryProvider<StockDbContext> _dapperQueryProvider;
+        //private readonly DapperQueryProvider<StockDbContext> _dapperQueryProvider;
 
         public GetProductQueryHandler(
-            EntityFrameworkCoreQueryProvider<StockDbContext> queryProvider,
-            DapperQueryProvider<StockDbContext> dapperQueryProvider
+            EntityFrameworkCoreQueryProvider<StockDbContext> queryProvider
+            //DapperQueryProvider<StockDbContext> dapperQueryProvider
             )
         {
             _queryProvider = queryProvider;
-            _dapperQueryProvider = dapperQueryProvider;
+            //_dapperQueryProvider = dapperQueryProvider;
         }
 
 
@@ -37,7 +37,7 @@ namespace Stock.Infrastructure.Products.Queries
                          .GetQuery<Product>()
                          .Select(p => p.Id)
                          .Where(id => id == query.Id)
-                         .SingleOrDefaultAsync<Guid>(cancellationToken);
+                         .SingleOrDefaultAsync(cancellationToken);
 
             // TODO: For pagination paginarToPagedListAsync
         }
