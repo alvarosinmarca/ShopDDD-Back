@@ -96,8 +96,8 @@ namespace Stock.Api
 
                 // EVENT BUS
                 //.AddRabbitMqEventBus(Configuration)
-                //.AddInMemoryEventBus()
-                .AddRedisEventBus(Configuration)
+                .AddInMemoryEventBus()
+                //.AddRedisEventBus(Configuration)
 
                 // MODULES
                 .AddStockModule(Configuration, "StockConnection")

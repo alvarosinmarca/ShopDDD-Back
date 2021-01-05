@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using SharedKernel.Domain.Aggregates;
+using Stock.Domain.Products.Events;
 
 namespace Stock.Domain.Products
 {
@@ -13,6 +14,9 @@ namespace Stock.Domain.Products
             _images = new HashSet<Image>();
         }
 
+        /// <summary>
+        /// Static constructor for create a product and store a ProductCreatedDomainEvent
+        /// </summary>
         public static Product Create(Guid id)
         {
             var product = new Product
@@ -20,7 +24,7 @@ namespace Stock.Domain.Products
                 Id = id
             };
 
-            product.Record(new ProductCreatedEvent(id.ToString())); // Aquí añado eventos al agregado raíz, después inyectas IEventBus y le pasas estos eventos
+            product.Record(new ProductCreatedDomainEvent(id.ToString())); // Aquí añado eventos al agregado raíz, después inyectas IEventBus y le pasas estos eventos
 
             return product;
         }

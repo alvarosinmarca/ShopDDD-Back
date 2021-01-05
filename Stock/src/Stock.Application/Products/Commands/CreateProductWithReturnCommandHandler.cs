@@ -24,18 +24,20 @@ namespace Stock.Application.Products.Commands
 
         public Task<Guid> Handle(CreateProductWithReturnCommand command, CancellationToken cancellationToken)
         {
-            var newProduct = Product.Create(command.Id);
-            _productRepository.Add(newProduct);
+            //var newProduct = Product.Create(command.Id);
+            //_productRepository.Add(newProduct);
 
-            var registersCreated = _productRepository.SaveChanges(); // Here you can do UnitOfWork and will save
+            //var registersCreated = _productRepository.SaveChanges(); // Here you can do UnitOfWork and will save
 
-            if (registersCreated > 0)
-                _customLogger.Info("Product created: " + newProduct);
+            //if (registersCreated > 0)
+            //    _customLogger.Info("Product created: " + newProduct);
 
-            // TODO: Here will launch a event when the events work in SharedKernel
-            //return _eventBus.Publish(productCreate.PullDomainEvents(), cancellationToken);
+            //// TODO: Here will launch a event when the events work in SharedKernel
+            ////return _eventBus.Publish(productCreate.PullDomainEvents(), cancellationToken);
 
-            return Task.FromResult(newProduct.Id);
+            //return Task.FromResult(newProduct.Id);
+
+            return null;
         }
     }
 }

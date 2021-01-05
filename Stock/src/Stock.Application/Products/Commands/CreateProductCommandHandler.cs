@@ -1,30 +1,22 @@
 ﻿using SharedKernel.Application.Cqrs.Commands.Handlers;
-using Stock.Domain.Products;
 using System.Threading;
 using System.Threading.Tasks;
+using Stock.Application.Products.Create;
 
 namespace Stock.Application.Products.Commands
 {
     internal class CreateProductCommandHandler : ICommandRequestHandler<CreateProductCommand>
     {
-        private readonly IProductRepository _productRepository;
+        private readonly ProductCreator _productCreator;
 
-        public CreateProductCommandHandler(IProductRepository productRepository)
+        public CreateProductCommandHandler(ProductCreator productCreator)
         {
-            _productRepository = productRepository;
+            _productCreator = productCreator;
         }
 
         public Task Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
-            var newProduct = Product.Create(command.Id);
-            _productRepository.Add(newProduct);
-
-            _productRepository.SaveChanges(); // Here you can do UnitOfWork and will save
-
-            // TODO: Here will launch a event when the events work in SharedKernel
-            //return _eventBus.Publish(productCreate.PullDomainEvents(), cancellationToken);
-
-            return Task.FromResult(newProduct.Id);
+            return _productCreator.Create(command.Id, cancellationToken);
         }
     }
 }

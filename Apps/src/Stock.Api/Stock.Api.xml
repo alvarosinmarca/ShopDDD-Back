@@ -4,19 +4,19 @@
         <name>Stock.Api</name>
     </assembly>
     <members>
-        <member name="M:Stock.Api.Products.ProductsController.CreateProductWithReturn(SharedKernel.Application.Cqrs.Commands.ICommandBus,Stock.Application.Products.Commands.CreateProductCommand,System.Threading.CancellationToken)">
+        <member name="M:Stock.Api.Products.ProductsController.CreateProduct(SharedKernel.Application.Cqrs.Commands.ICommandBus,Stock.Application.Products.Commands.CreateProductCommand,System.Threading.CancellationToken)">
             <summary>
             Create a product
+            </summary>
+        </member>
+        <member name="M:Stock.Api.Products.ProductsController.CreateProductWithReturn(SharedKernel.Application.Cqrs.Commands.ICommandBus,Stock.Application.Products.Commands.CreateProductWithReturnCommand,System.Threading.CancellationToken)">
+            <summary>
+            Create a product and return the guid of DB
             </summary>
         </member>
         <member name="M:Stock.Api.Products.ProductsController.GetProduct(SharedKernel.Application.Cqrs.Queries.IQueryBus,System.Guid,System.Threading.CancellationToken)">
             <summary>
             Get product by Id
-            </summary>
-        </member>
-        <member name="M:Stock.Api.Controllers.ProductsController.CreateProductWithReturn(SharedKernel.Application.Cqrs.Commands.ICommandBus,Stock.Application.Products.Commands.CreateProductWithReturnCommand,System.Threading.CancellationToken)">
-            <summary>
-            Create a product and return the guid of DB
             </summary>
         </member>
     </members>
