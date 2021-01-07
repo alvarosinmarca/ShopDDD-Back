@@ -26,7 +26,7 @@ namespace Stock.Infrastructure
             return services
                 .AddDomainEvents(typeof(ProductCreatedDomainEvent)) // Esta es una clase, pero puede ser cualquiera de la misma capa
                 .AddDomainEventsSubscribers(typeof(SendMailProductCreatedDomainEventSubscriber)) // Esta es una clase, pero puede ser cualquiera de la misma capa
-                .AddCommandsHandlers(typeof(CreateProductCommand)) // Esta es una clase, pero puede ser cualquiera de la misma capa
+                .AddCommandsHandlers(typeof(CreateProductCommandHandler)) // Esta es una clase, pero puede ser cualquiera de la misma capa
                 .AddQueriesHandlers(typeof(StockDbContext))
                 .AddDapperSqlServer<StockDbContext>(configuration, connectionStringName)
                 .AddEntityFrameworkCoreSqlServer<StockDbContext>(configuration, connectionStringName)
@@ -38,7 +38,7 @@ namespace Stock.Infrastructure
         private static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<ProductCreator, ProductCreator>();
-            //services.AddScoped<SendMailProductCreatedDomainEventSubscriber, SendMailProductCreatedDomainEventSubscriber>();
+            services.AddScoped<SendMailProductCreatedDomainEventSubscriber, SendMailProductCreatedDomainEventSubscriber>();
             return services;
         }
 

@@ -102,8 +102,8 @@ namespace Stock.Api
                 // MODULES
                 .AddStockModule(Configuration, "StockConnection")
 
-            // Register all domain event subscribers
-            .AddDomainEventSubscribers();
+                // Register all domain event subscribers
+                .AddDomainEventSubscribers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IOptions<OpenApiOptions> options)
