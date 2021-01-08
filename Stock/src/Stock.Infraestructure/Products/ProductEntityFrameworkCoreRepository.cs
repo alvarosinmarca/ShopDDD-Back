@@ -4,7 +4,7 @@ using Stock.Infrastructure.Data.EFCore;
 
 namespace Stock.Infrastructure.Products
 {
-    internal class ProductEntityFrameworkCoreRepository : EntityFrameworkCoreRepository<Product>, IProductRepository
+    internal class ProductEntityFrameworkCoreRepository : EntityFrameworkCoreRepositoryAsync<Product>, IProductRepository
     {
         public ProductEntityFrameworkCoreRepository(StockDbContext dbContext) : base(dbContext)
         {

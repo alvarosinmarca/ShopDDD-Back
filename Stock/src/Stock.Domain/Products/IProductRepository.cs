@@ -2,7 +2,7 @@
 
 namespace Stock.Domain.Products
 {
-    internal interface IProductRepository : IRepository<Product>
+    internal interface IProductRepository : IRepositoryAsync<Product>
     {
     }
 }

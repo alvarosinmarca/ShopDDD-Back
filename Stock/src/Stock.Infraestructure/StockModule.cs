@@ -37,9 +37,8 @@ namespace Stock.Infrastructure
 
         private static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-            services.AddScoped<ProductCreator, ProductCreator>();
-            services.AddScoped<SendMailProductCreatedDomainEventSubscriber, SendMailProductCreatedDomainEventSubscriber>();
-            return services;
+            return services
+                   .AddScoped<ProductCreator>();
         }
 
         private static IServiceCollection AddDomainServices(this IServiceCollection services)
