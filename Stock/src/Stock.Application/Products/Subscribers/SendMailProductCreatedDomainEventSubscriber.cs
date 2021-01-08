@@ -1,6 +1,6 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
+using SharedKernel.Application.Communication.Email;
 using SharedKernel.Application.Events;
 using Stock.Domain.Products.Events;
 
@@ -8,10 +8,16 @@ namespace Stock.Application.Products.Subscribers
 {
     internal class SendMailProductCreatedDomainEventSubscriber : DomainEventSubscriber<ProductCreatedDomainEvent>
     {
-        protected override Task On(ProductCreatedDomainEvent @event, CancellationToken cancellationToken)
+        private readonly IEmailSender _emailSender;
+
+        public SendMailProductCreatedDomainEventSubscriber(IEmailSender emailSender)
         {
-            Console.WriteLine("Event ProductCreatedDomainEvent executed");
-            return Task.CompletedTask;
+            _emailSender = emailSender;
+        }
+
+        protected override async Task On(ProductCreatedDomainEvent @event, CancellationToken cancellationToken)
+        {
+            await _emailSender.SendEmailAsync("target@target.com", "Event ProductCreatedDomainEvent executed", @event.EventId);
         }
     }
 }

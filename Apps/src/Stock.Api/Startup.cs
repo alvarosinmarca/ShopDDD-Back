@@ -9,6 +9,7 @@ using Microsoft.Extensions.Options;
 using SharedKernel.Api.ServiceCollectionExtensions;
 using SharedKernel.Infrastructure;
 using SharedKernel.Infrastructure.Caching;
+using SharedKernel.Infrastructure.Communication.Email.Smtp;
 using SharedKernel.Infrastructure.Cqrs.Commands;
 using SharedKernel.Infrastructure.Cqrs.Queries;
 using SharedKernel.Infrastructure.Events;
@@ -103,7 +104,8 @@ namespace Stock.Api
                 .AddStockModule(Configuration, "StockConnection")
 
                 // Register all domain event subscribers
-                .AddDomainEventSubscribers();
+                .AddDomainEventSubscribers()
+                .AddSmtp(Configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IOptions<OpenApiOptions> options)

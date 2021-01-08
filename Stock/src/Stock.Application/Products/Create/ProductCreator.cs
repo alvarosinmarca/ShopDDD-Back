@@ -22,7 +22,7 @@ namespace Stock.Application.Products.Create
             var product = Product.Create(id);
 
             // This form break free threads if this is executed more times
-            await _productRepository.AddAsync(product,cancellationToken);
+            await _productRepository.AddAsync(product, cancellationToken);
             await _productRepository.SaveChangesAsync(cancellationToken);
 
             await _eventBus.Publish(product.PullDomainEvents(), cancellationToken);
