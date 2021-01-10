@@ -12,7 +12,7 @@ services:
         container_name: sql-server
         image: mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-16.04
         ports:
-            - 22220:1433
+            - 33330:1433
         environment:
             - ACCEPT_EULA=Y
             - SA_PASSWORD=1234*ABS*VK
