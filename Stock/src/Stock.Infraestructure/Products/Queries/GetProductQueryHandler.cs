@@ -30,7 +30,7 @@ namespace Stock.Infrastructure.Products.Queries
         public async Task<Guid> Handle(GetProductQuery query, CancellationToken cancellationToken)
         {
             // Example with Dapper:
-            //return await _dapperQueryProvider
+            // return await _dapperQueryProvider
             //             .ExecuteQueryFirstOrDefaultAsync<Guid>("SELECT TOP 1 Id FROM stock.product");
 
             return await _queryProvider

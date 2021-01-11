@@ -101,7 +101,7 @@ namespace Stock.Api
                 .AddRedisEventBus(Configuration)
 
                 // MODULES
-                .AddStockModule(Configuration, "StockConnection")
+                .AddStockModule(Configuration, "StockConnectionSqlServer")
 
                 // Register all domain event subscribers
                 .AddDomainEventSubscribers()
