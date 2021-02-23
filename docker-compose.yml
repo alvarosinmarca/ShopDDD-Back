@@ -21,6 +21,15 @@ services:
             - .\SqlServer\sqlserver:/var/opt/sqlserver
             - .\SqlServer\data:/var/opt/mssql/data
 
+  postgres:
+        image: postgres:latest
+        container_name: postgres
+        environment:
+            POSTGRES_USER: sa
+            POSTGRES_PASSWORD: yourStrong(!)Password
+        ports:
+            - 6666:5432
+
   redis:
         container_name: redis-server
         image: redis:6.0.9
