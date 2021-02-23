@@ -28,9 +28,10 @@ namespace Stock.Infrastructure
                 .AddDomainEventsSubscribers(typeof(SendMailProductCreatedDomainEventSubscriber)) // Esta es una clase, pero puede ser cualquiera de la misma capa
                 .AddCommandsHandlers(typeof(CreateProductCommandHandler)) // Esta es una clase, pero puede ser cualquiera de la misma capa
                 .AddQueriesHandlers(typeof(StockDbContext))
-                .AddDapperSqlServer<StockDbContext>(configuration, connectionStringName)
-                .AddEntityFrameworkCoreSqlServer<StockDbContext>(configuration, connectionStringName)
-                //.AddPostgreSql<StockDbContext>(configuration,connectionStringName)
+                //.AddDapperSqlServer<StockDbContext>(configuration, connectionStringName)
+                //.AddEntityFrameworkCoreSqlServer<StockDbContext>(configuration, connectionStringName)
+                .AddDapperPostgreSql<StockDbContext>(configuration, connectionStringName)
+                .AddEntityFrameworkCorePostgreSql<StockDbContext>(configuration, connectionStringName)
                 .AddApplicationServices()
                 .AddDomainServices()
                 .AddRepositories();
