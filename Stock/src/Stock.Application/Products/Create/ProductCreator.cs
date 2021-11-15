@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using SharedKernel.Domain.Events;
+using SharedKernel.Application.Events;
 using Stock.Domain.Products;
 
 namespace Stock.Application.Products.Create

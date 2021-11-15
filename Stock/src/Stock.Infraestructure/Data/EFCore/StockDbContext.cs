@@ -7,7 +7,7 @@ namespace Stock.Infrastructure.Data.EFCore
     {
         // typeof(StockDbContext).Assembly Ahorramos los mappings de EregesUnitOfWork
         public StockDbContext(DbContextOptions options, IAuditableService auditableService) : 
-            base(options, "stock", typeof(StockDbContext).Assembly, auditableService, null)
+            base(options, "stock", typeof(StockDbContext).Assembly, auditableService)
         {
 
         }

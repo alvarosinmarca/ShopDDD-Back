@@ -15,5 +15,9 @@ namespace Stock.Domain.Products.Events
             return new ProductCreatedDomainEvent(aggregateId, eventId, occurredOn);
         }
 
+        public override string GetEventName()
+        {
+            return "ProductCreated";
+        }
     }
 }

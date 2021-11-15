@@ -7,12 +7,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using SharedKernel.Api.ServiceCollectionExtensions;
+using SharedKernel.Api.ServiceCollectionExtensions.OpenApi;
+using SharedKernel.Application.Security;
 using SharedKernel.Infrastructure;
 using SharedKernel.Infrastructure.Caching;
 using SharedKernel.Infrastructure.Communication.Email.Smtp;
 using SharedKernel.Infrastructure.Cqrs.Commands;
 using SharedKernel.Infrastructure.Cqrs.Queries;
 using SharedKernel.Infrastructure.Events;
+using SharedKernel.Infrastructure.HealthChecks;
 using Stock.Infrastructure;
 using Stock.Infrastructure.Products.Validators;
 
@@ -108,7 +111,7 @@ namespace Stock.Api
                 .AddSmtp(Configuration);
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IOptions<OpenApiOptions> options)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IOptions<OpenApiOptions> options, IOptions<OpenIdOptions> openIdOptions)
         {
             if (env.IsDevelopment())
             {
@@ -134,7 +137,7 @@ namespace Stock.Api
                     endpoints.MapControllers();
                 })
                 .UseSharedKernelMetrics()
-                .UseSharedKernelOpenApi(options);
+                .UseSharedKernelOpenApi(options, openIdOptions);
         }
     }
 }

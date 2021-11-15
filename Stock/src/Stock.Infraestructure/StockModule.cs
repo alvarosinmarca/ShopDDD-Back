@@ -30,7 +30,7 @@ namespace Stock.Infrastructure
                 .AddQueriesHandlers(typeof(StockDbContext))
                 //.AddDapperSqlServer<StockDbContext>(configuration, connectionStringName)
                 //.AddEntityFrameworkCoreSqlServer<StockDbContext>(configuration, connectionStringName)
-                .AddDapperPostgreSql<StockDbContext>(configuration, connectionStringName)
+                .AddDapperPostgreSql(configuration, connectionStringName)
                 .AddEntityFrameworkCorePostgreSql<StockDbContext>(configuration, connectionStringName)
                 .AddApplicationServices()
                 .AddDomainServices()
