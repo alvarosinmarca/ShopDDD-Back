@@ -5,7 +5,7 @@
 </p>
 
 # ShopDDD
-This is a shop writed in C# with .NET Core and use SharedKernel as core.
+This is a shop writed in C# with .NET 6 and use SharedKernel as core.
 
 ## ShopDDD need references to SharedKernel.
 ### 1 - Download [ShopDDD](https://github.com/alvarosinmarca/ShopDDD-Back) project.
