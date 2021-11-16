@@ -100,7 +100,7 @@ namespace Stock.Api
 
                 // EVENT BUS
                 //.AddRabbitMqEventBus(Configuration)
-                //.AddInMemoryEventBus()
+                //.AddInMemoryEventBus(Configuration)
                 .AddRedisEventBus(Configuration)
 
                 // MODULES

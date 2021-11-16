@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\GitHub\SharedKernel\src\Domain\SharedKernel.Domain.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Pipoburgos.SharedKernel.Domain" Version="6.0.0-rc3" />
+	</ItemGroup>
 
 </Project>

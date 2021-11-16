@@ -21,12 +21,12 @@ services:
             - .\SqlServer\sqlserver:/var/opt/sqlserver
             - .\SqlServer\data:/var/opt/mssql/data
 
-  postgres:
-        image: postgres:latest
-        container_name: postgres
+  postgres-stock:
+        image: postgres
+        container_name: postgres-stock
         environment:
             POSTGRES_USER: sa
-            POSTGRES_PASSWORD: yourStrong(!)Password
+            POSTGRES_PASSWORD: P1234ABS*VK
         ports:
             - 6666:5432
 

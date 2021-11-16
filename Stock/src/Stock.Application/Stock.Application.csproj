@@ -9,8 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\GitHub\SharedKernel\src\Application\SharedKernel.Application.csproj" />
     <ProjectReference Include="..\Stock.Domain\Stock.Domain.csproj" />
   </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Pipoburgos.SharedKernel.Application" Version="6.0.0-rc3" />
+	</ItemGroup>
 
 </Project>
