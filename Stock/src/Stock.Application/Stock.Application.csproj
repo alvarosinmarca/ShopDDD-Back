@@ -13,7 +13,7 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Pipoburgos.SharedKernel.Application" Version="6.0.0-rc3" />
+		<PackageReference Include="Pipoburgos.SharedKernel.Application" Version="6.0.1" />
 	</ItemGroup>
 
 </Project>
